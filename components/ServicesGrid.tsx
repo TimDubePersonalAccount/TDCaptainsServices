@@ -24,8 +24,9 @@ export default function ServicesGrid({
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {serviceItems.map((service, index) => (
-            <article
+            <Link
               key={service.title}
+              href={service.href}
               className="group flex h-full flex-col rounded-[1.35rem] border border-mist-300 bg-white p-6 shadow-[0_14px_30px_-24px_rgba(15,42,68,0.14)] transition-colors duration-300 hover:border-sand-400/70"
             >
               <div className="flex items-center justify-between gap-4">
@@ -44,13 +45,14 @@ export default function ServicesGrid({
                 {service.description}
               </p>
 
-              <Link
-                href="/request-service"
+              <span
                 className="mt-6 inline-flex items-center text-sm font-semibold text-ocean-800 transition-colors duration-300 group-hover:text-ocean-950"
               >
-                Request Service
-              </Link>
-            </article>
+                {service.href.startsWith("/services/")
+                  ? "View Service"
+                  : "Request Service"}
+              </span>
+            </Link>
           ))}
         </div>
       </div>

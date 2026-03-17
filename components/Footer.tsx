@@ -69,9 +69,13 @@ export default function Footer() {
             </p>
             <div className="mt-5 space-y-3">
               {serviceItems.slice(0, 4).map((item) => (
-                <p key={item.title} className="text-base text-[#f3efe7]">
+                <Link
+                  key={item.title}
+                  href={item.href}
+                  className="block text-base text-[#f3efe7] transition-colors duration-300 hover:text-white"
+                >
                   {item.title}
-                </p>
+                </Link>
               ))}
             </div>
           </div>

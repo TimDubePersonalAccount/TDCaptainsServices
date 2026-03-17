@@ -10,6 +10,7 @@ export default function TowingServicesPage() {
     <ServiceDetail
       title="Towing Services"
       description="Responsive towing support when a vessel needs prompt attention, local coordination, and dependable assistance."
+      requestHref="/request-service?service=towing-services"
       highlights={[
         "Emergency towing response",
         "Local coordination support",

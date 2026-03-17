@@ -10,6 +10,7 @@ export default function LaunchServicePage() {
     <ServiceDetail
       title="Launch Service"
       description="Launch-day help built around preparation, dockside coordination, and a smoother departure from the start."
+      requestHref="/request-service?service=launch-service"
       highlights={[
         "Pre-departure checks",
         "Dock handling support",
