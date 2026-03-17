@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import HowItWorksStrip from "@/components/HowItWorksStrip";
 import ServicesGrid from "@/components/ServicesGrid";
-import TrustSection from "@/components/TrustSection";
 
 export default function Home() {
   const requestDetails = [
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <HowItWorksStrip />
       <ServicesGrid />
-      <TrustSection />
 
       <section className="bg-mist-100 py-24 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

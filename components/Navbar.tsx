@@ -137,9 +137,12 @@ export default function Navbar() {
               </span>
             </Link>
 
-            <div className="hidden items-center gap-4 md:flex">
+            <div className="hidden items-center gap-5 md:flex">
               <div className="h-8 w-px bg-mist-300" aria-hidden="true" />
-              <a href={phoneLink} className="text-right">
+              <a
+                href={phoneLink}
+                className="flex flex-col items-center text-center"
+              >
                 <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                   Call Us
                 </span>
