@@ -39,79 +39,79 @@ export const serviceItems = [
   {
     title: "Captain for Hire",
     description:
-      "Experienced helm support for owner-assisted outings, training sessions, and planned vessel movements.",
+      "Experienced helm support for owner outings, training runs, and planned vessel moves.",
     label: "Navigation",
   },
   {
     title: "Launch Assistance",
     description:
-      "Pre-departure support, dock handling, and launch-day coordination for a confident start on the water.",
+      "Dock handling and launch-day support to get your boat off the line smoothly.",
     label: "Dockside",
   },
   {
     title: "Boat Cleaning & Maintenance",
     description:
-      "Routine care, vessel cleaning, and maintenance planning to keep your boat ready for the season.",
+      "Routine cleaning and seasonal upkeep to keep your boat ready to use.",
     label: "Care",
   },
   {
     title: "Boat Repair",
     description:
-      "Support for troubleshooting, repair coordination, and follow-up work when problems need timely attention.",
+      "Troubleshooting and repair coordination when something needs attention fast.",
     label: "Repair",
   },
   {
     title: "Marine Electronics",
     description:
-      "Electronics installs, upgrades, diagnostics, and onboard system support for modern vessels.",
+      "Installation, upgrades, and diagnostics for onboard systems and electronics.",
     label: "Systems",
   },
   {
     title: "Drone Aerial Photography",
     description:
-      "Aerial photography for marketing, inspections, marina visuals, and polished vessel presentation.",
+      "Clean aerial photos for listings, inspections, marina views, and documentation.",
     label: "Media",
   },
   {
     title: "Towing Services",
     description:
-      "Emergency towing support and local response coordination when you need help quickly and safely.",
+      "Fast local towing support when you need safe, dependable help on short notice.",
     label: "Support",
   },
 ];
 
 export const processSteps = [
   {
-    title: "Submit Your Request",
+    title: "Tell Us About the Boat",
     description:
-      "Share the boat location, service needs, and a short message through the request form.",
+      "Send your location, vessel details, and the kind of help you need.",
   },
   {
-    title: "Confirm The Details",
+    title: "We Confirm the Details",
     description:
-      "Review availability, timing, and the service scope so the work is clearly understood before dispatch.",
+      "We review timing, availability, and the job details before heading out.",
   },
   {
-    title: "On-Site Marine Support",
+    title: "We Show Up Ready",
     description:
-      "Receive dependable dockside or on-water support with clear communication from arrival through completion.",
+      "Expect clear communication and practical dockside or on-water support from start to finish.",
   },
 ];
 
 export const trustHighlights = [
   {
-    title: "Local Hudson River Experts",
+    title: "Local River Knowledge",
     description:
-      "Local familiarity, marina knowledge, and practical on-water experience help set the tone for dependable service.",
+      "Local knowledge helps us move faster, communicate clearly, and work confidently around marinas and river conditions.",
   },
   {
-    title: "Fast Mobile Marine Support",
+    title: "Responsive Mobile Support",
     description:
-      "Responsive dockside visits and mobile coordination make it easier to get help where the boat is.",
+      "From routine service to urgent help, the focus is on showing up prepared and keeping you updated.",
   },
   {
-    title: "Professional Client Care",
+    title: "Professional Follow-Through",
     description:
-      "A polished, respectful experience built around communication, follow-through, and reliable work.",
+      "Respectful service, practical problem-solving, and clean communication are part of every job.",
   },
 ];

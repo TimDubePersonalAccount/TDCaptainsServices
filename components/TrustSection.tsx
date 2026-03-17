@@ -4,22 +4,23 @@ import { trustHighlights } from "@/components/site-data";
 
 export default function TrustSection() {
   return (
-    <section className="bg-mist-200 py-24 sm:py-28">
+    <section className="bg-ocean-950 py-24 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
             <SectionHeading
               eyebrow="Why TD Captains Services"
-              title="A service brand that should feel steady, local, and dependable."
-              description="These content blocks are shaped around the signals boat owners look for most: local familiarity, responsive help, and confidence that the work will be handled professionally."
+              title="Local service that feels steady from the first call."
+              description="Boat owners usually want the same three things: a quick response, clear communication, and confidence that the job will be handled right."
+              invert
             />
 
             <div className="mt-8">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-ocean-950"
+                className="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-white hover:text-ocean-950"
               >
-                Learn More About Us
+                About TD Captains
               </Link>
             </div>
           </div>
