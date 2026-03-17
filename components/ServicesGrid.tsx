@@ -45,10 +45,12 @@ export default function ServicesGrid({
               </p>
 
               <Link
-                href="/request-service"
+                href={service.href}
                 className="mt-6 inline-flex items-center text-sm font-semibold text-ocean-800 transition-colors duration-300 group-hover:text-ocean-950"
               >
-                Request Service
+                {service.href.startsWith("/services/")
+                  ? "View Service"
+                  : "Request Service"}
               </Link>
             </article>
           ))}

@@ -10,6 +10,7 @@ export default function CaptainForHirePage() {
     <ServiceDetail
       title="Captain For Hire"
       description="Professional captain support for charters, instruction, deliveries, and vessel oversight throughout the NYC Hudson River area."
+      requestHref="/request-service?service=captain-for-hire"
       showOverviewSection={false}
       highlights={[
         "Owner-assisted outings",

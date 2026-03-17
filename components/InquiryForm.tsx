@@ -5,6 +5,7 @@ type InquiryFormProps = {
   description: string;
   submitLabel: string;
   aside?: ReactNode;
+  initialRequestedService?: string;
 };
 
 const fieldClassName =
@@ -15,6 +16,7 @@ export default function InquiryForm({
   description,
   submitLabel,
   aside,
+  initialRequestedService,
 }: InquiryFormProps) {
   return (
     <section className="bg-white py-24 sm:py-28">
@@ -108,15 +110,15 @@ export default function InquiryForm({
                 <select
                   id="requested-service"
                   name="requestedService"
-                  defaultValue=""
+                  defaultValue={initialRequestedService ?? ""}
                   className={fieldClassName}
                 >
                   <option value="" disabled>
                     Select a service
                   </option>
                   <option value="captain-for-hire">Captain for Hire</option>
-                  <option value="launch-assistance">Launch Assistance</option>
-                  <option value="cleaning-maintenance">
+                  <option value="launch-service">Launch Assistance</option>
+                  <option value="maintenance">
                     Boat Cleaning &amp; Maintenance
                   </option>
                   <option value="boat-repair">Boat Repair</option>

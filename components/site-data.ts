@@ -41,42 +41,56 @@ export const serviceItems = [
     description:
       "Experienced helm support for owner outings, training runs, and planned vessel moves.",
     label: "Navigation",
+    href: "/services/captain-for-hire",
+    requestValue: "captain-for-hire",
   },
   {
     title: "Launch Assistance",
     description:
       "Dock handling and launch-day support to get your boat off the line smoothly.",
     label: "Dockside",
+    href: "/services/launch-service",
+    requestValue: "launch-service",
   },
   {
     title: "Boat Cleaning & Maintenance",
     description:
       "Routine cleaning and seasonal upkeep to keep your boat ready to use.",
     label: "Care",
+    href: "/services/maintenance",
+    requestValue: "maintenance",
   },
   {
     title: "Boat Repair",
     description:
       "Troubleshooting and repair coordination when something needs attention fast.",
     label: "Repair",
+    href: "/request-service?service=boat-repair",
+    requestValue: "boat-repair",
   },
   {
     title: "Marine Electronics",
     description:
       "Installation, upgrades, and diagnostics for onboard systems and electronics.",
     label: "Systems",
+    href: "/services/marine-electronics",
+    requestValue: "marine-electronics",
   },
   {
     title: "Drone Aerial Photography",
     description:
       "Clean aerial photos for listings, inspections, marina views, and documentation.",
     label: "Media",
+    href: "/request-service?service=drone-photography",
+    requestValue: "drone-photography",
   },
   {
     title: "Towing Services",
     description:
       "Fast local towing support when you need safe, dependable help on short notice.",
     label: "Support",
+    href: "/services/towing-services",
+    requestValue: "towing-services",
   },
 ];
 
