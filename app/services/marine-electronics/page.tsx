@@ -10,6 +10,7 @@ export default function MarineElectronicsPage() {
     <ServiceDetail
       title="Marine Electronics"
       description="Onboard electronics support for installs, upgrades, troubleshooting, and practical system improvements."
+      requestHref="/request-service?service=marine-electronics"
       highlights={[
         "Electronics installs and upgrades",
         "System troubleshooting",

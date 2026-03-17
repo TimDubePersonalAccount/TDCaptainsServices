@@ -24,9 +24,9 @@ export default function Navbar() {
   const isServicesActive = pathname.startsWith("/services/");
 
   return (
-    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6">
+    <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 sm:px-6">
       <div className="pointer-events-auto mx-auto max-w-7xl">
-        <div className="rounded-[1.2rem] border border-mist-300 bg-[rgba(255,255,255,0.97)] shadow-[0_14px_30px_-24px_rgba(15,42,68,0.16)] backdrop-blur-sm">
+        <div className="rounded-b-[1.2rem] border border-t-0 border-mist-300 bg-[rgba(255,255,255,0.97)] shadow-[0_14px_30px_-24px_rgba(15,42,68,0.16)] backdrop-blur-sm">
           <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-5 lg:px-7 lg:py-3.5">
             <div className="hidden min-w-0 items-center md:flex">
               <Link href="/" className="shrink-0">

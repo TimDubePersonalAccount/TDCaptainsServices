@@ -14,6 +14,7 @@ type ServiceDetailProps = {
   subservicesTitle?: string;
   subservicesEyebrow?: string;
   showOverviewSection?: boolean;
+  requestHref?: string;
 };
 
 export default function ServiceDetail({
@@ -24,6 +25,7 @@ export default function ServiceDetail({
   subservicesTitle = "Subservices",
   subservicesEyebrow = "Service Details",
   showOverviewSection = true,
+  requestHref = "/request-service",
 }: ServiceDetailProps) {
   return (
     <main>
@@ -55,7 +57,7 @@ export default function ServiceDetail({
               </p>
               <div className="mt-8">
                 <Link
-                  href="/request-service"
+                  href={requestHref}
                   className="inline-flex items-center justify-center rounded-full bg-ocean-950 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-ocean-900"
                 >
                   Request This Service
@@ -100,6 +102,7 @@ export default function ServiceDetail({
                   key={subservice.title}
                   title={subservice.title}
                   description={subservice.description}
+                  requestHref={requestHref}
                 />
               ))}
             </div>

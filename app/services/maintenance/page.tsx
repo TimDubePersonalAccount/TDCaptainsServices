@@ -10,6 +10,7 @@ export default function MaintenancePage() {
     <ServiceDetail
       title="Maintenance"
       description="Routine vessel care and maintenance planning to help keep your boat prepared, clean, and ready for the season."
+      requestHref="/request-service?service=maintenance"
       highlights={[
         "Seasonal maintenance planning",
         "Routine vessel care",

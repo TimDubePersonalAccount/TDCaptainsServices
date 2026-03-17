@@ -7,7 +7,20 @@ export const metadata: Metadata = {
   title: "Request Service",
 };
 
-export default function RequestServicePage() {
+type RequestServicePageProps = {
+  searchParams: Promise<{
+    service?: string | string[];
+  }>;
+};
+
+export default async function RequestServicePage({
+  searchParams,
+}: RequestServicePageProps) {
+  const params = await searchParams;
+  const initialRequestedService = Array.isArray(params.service)
+    ? params.service[0]
+    : params.service;
+
   return (
     <main>
       <PageHero
@@ -20,8 +33,9 @@ export default function RequestServicePage() {
         title="Service Request Form"
         description="Capture the essential contact details and service needs so the team can review the job and follow up clearly."
         submitLabel="Request Service"
+        initialRequestedService={initialRequestedService}
         aside={
-          <div className="rounded-[1.35rem] bg-ocean-900 p-8 text-white shadow-[0_18px_40px_-30px_rgba(15,42,68,0.18)]">
+          <div className="rounded-[1.35rem] bg-ocean-950 p-8 text-white shadow-[0_18px_40px_-30px_rgba(15,42,68,0.18)]">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#f3efe7]">
               What To Expect
             </p>
