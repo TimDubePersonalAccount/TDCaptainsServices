@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { Merriweather, Source_Sans_3 } from "next/font/google";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
-  subsets: ["latin"],
-});
-
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const merriweather = Merriweather({
+  variable: "--font-merriweather",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | TD Captains Services",
   },
   description:
-    "Premium Hudson River marine services website skeleton built with Next.js, TypeScript, and Tailwind CSS.",
+    "Reliable Hudson River marine services website built with Next.js, TypeScript, and Tailwind CSS.",
 };
 
 export default function RootLayout({
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} ${cormorant.variable} min-h-screen bg-background text-foreground antialiased`}
+        className={`${sourceSans.variable} ${merriweather.variable} min-h-screen bg-background text-foreground antialiased`}
       >
         <div className="relative flex min-h-screen flex-col">
           <Navbar />

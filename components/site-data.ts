@@ -1,9 +1,36 @@
 export const navigationItems = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/request-service", label: "Request Service" },
+];
+
+export const serviceMenuItems = [
+  {
+    href: "/services/captain-for-hire",
+    label: "Captain For Hire",
+    description: "Professional helm support for private trips and owner assistance.",
+  },
+  {
+    href: "/services/launch-service",
+    label: "Launch Service",
+    description: "Dockside help and launch-day preparation for a smooth departure.",
+  },
+  {
+    href: "/services/maintenance",
+    label: "Maintenance",
+    description: "Routine vessel care and maintenance planning throughout the season.",
+  },
+  {
+    href: "/services/towing-services",
+    label: "Towing Services",
+    description: "Responsive support when your vessel needs prompt towing assistance.",
+  },
+  {
+    href: "/services/marine-electronics",
+    label: "Marine Electronics",
+    description: "Electronics upgrades, installs, and onboard diagnostics support.",
+  },
 ];
 
 export const phoneNumber = "(845) 555-0186";
@@ -24,31 +51,31 @@ export const serviceItems = [
   {
     title: "Boat Cleaning & Maintenance",
     description:
-      "Routine care, detailing placeholders, and maintenance visit scheduling for premium presentation.",
+      "Routine care, vessel cleaning, and maintenance planning to keep your boat ready for the season.",
     label: "Care",
   },
   {
     title: "Boat Repair",
     description:
-      "A simple service placeholder for troubleshooting, repair coordination, and follow-up work scopes.",
+      "Support for troubleshooting, repair coordination, and follow-up work when problems need timely attention.",
     label: "Repair",
   },
   {
     title: "Marine Electronics",
     description:
-      "Future-ready for electronics installs, upgrades, diagnostics, and onboard system optimization.",
+      "Electronics installs, upgrades, diagnostics, and onboard system support for modern vessels.",
     label: "Systems",
   },
   {
     title: "Drone Aerial Photography",
     description:
-      "Promotional captures, inspection visuals, and marina content support presented with a polished premium feel.",
+      "Aerial photography for marketing, inspections, marina visuals, and polished vessel presentation.",
     label: "Media",
   },
   {
     title: "Towing Services",
     description:
-      "Emergency assistance placeholder for support requests that need fast local coordination and response.",
+      "Emergency towing support and local response coordination when you need help quickly and safely.",
     label: "Support",
   },
 ];
@@ -62,12 +89,12 @@ export const processSteps = [
   {
     title: "Confirm The Details",
     description:
-      "Use this step to review scheduling, availability, and the service scope before dispatch.",
+      "Review availability, timing, and the service scope so the work is clearly understood before dispatch.",
   },
   {
     title: "On-Site Marine Support",
     description:
-      "A placeholder for future dispatch, technician updates, and completed-service confirmation.",
+      "Receive dependable dockside or on-water support with clear communication from arrival through completion.",
   },
 ];
 
@@ -75,16 +102,16 @@ export const trustHighlights = [
   {
     title: "Local Hudson River Experts",
     description:
-      "Built to communicate local knowledge, marina familiarity, and trusted on-water experience.",
+      "Local familiarity, marina knowledge, and practical on-water experience help set the tone for dependable service.",
   },
   {
     title: "Fast Mobile Marine Support",
     description:
-      "Designed for responsive dockside visits, mobile service coordination, and urgent marine needs.",
+      "Responsive dockside visits and mobile coordination make it easier to get help where the boat is.",
   },
   {
-    title: "Premium Client Experience",
+    title: "Professional Client Care",
     description:
-      "A clean structure for refined branding, polished requests, and future concierge-style workflows.",
+      "A polished, respectful experience built around communication, follow-through, and reliable work.",
   },
 ];

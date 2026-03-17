@@ -10,14 +10,14 @@ export default function TrustSection() {
           <div>
             <SectionHeading
               eyebrow="Why TD Captains Services"
-              title="Trust-building content blocks with room to grow into proof, reviews, and local credibility."
-              description="This section is structured for confidence signals, concise positioning, and future integrations like testimonials, certifications, and case studies."
+              title="A service brand that should feel steady, local, and dependable."
+              description="These content blocks are shaped around the signals boat owners look for most: local familiarity, responsive help, and confidence that the work will be handled professionally."
             />
 
             <div className="mt-8">
               <Link
                 href="/about"
-                className="inline-flex items-center justify-center rounded-full bg-ocean-950 px-6 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-ocean-950"
               >
                 Learn More About Us
               </Link>
@@ -28,17 +28,15 @@ export default function TrustSection() {
             {trustHighlights.map((item, index) => (
               <article
                 key={item.title}
-                className={`rounded-[1.75rem] border p-7 shadow-[0_24px_60px_-45px_rgba(15,23,42,0.55)] ${
+                className={`rounded-[1.35rem] border p-7 shadow-[0_14px_30px_-24px_rgba(15,42,68,0.14)] ${
                   index === 2
-                    ? "border-ocean-950 bg-ocean-950 text-white sm:col-span-2"
-                    : "border-slate-200 bg-white text-slate-900"
+                    ? "border-ocean-900 bg-ocean-900 text-white sm:col-span-2"
+                    : "border-mist-300 bg-white text-slate-900"
                 }`}
               >
                 <div
-                  className={`h-12 w-12 rounded-2xl border ${
-                    index === 2
-                      ? "border-white/15 bg-white/10"
-                      : "border-ocean-700/20 bg-mist-100"
+                  className={`h-1.5 w-12 rounded-full ${
+                    index === 2 ? "bg-sand-400" : "bg-sand-400/80"
                   }`}
                 />
                 <h3
@@ -50,7 +48,7 @@ export default function TrustSection() {
                 </h3>
                 <p
                   className={`mt-3 text-base leading-8 ${
-                    index === 2 ? "text-slate-300" : "text-slate-600"
+                    index === 2 ? "text-[#f3efe7]" : "text-slate-600"
                   }`}
                 >
                   {item.description}

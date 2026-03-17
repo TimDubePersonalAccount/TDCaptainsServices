@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4f7fb;
-  --foreground: #0f172a;
-  --ocean-950: #081423;
-  --ocean-900: #0d2238;
-  --ocean-800: #153655;
-  --ocean-700: #24517a;
-  --mist-100: #f8fafc;
-  --mist-200: #eef3f8;
-  --mist-300: #dbe5f0;
+  --background: #f3efe7;
+  --foreground: #444f54;
+  --ocean-950: #0f2a44;
+  --ocean-900: #b3212b;
+  --ocean-800: #c6a25a;
+  --ocean-700: #444f54;
+  --mist-100: #ffffff;
+  --mist-200: #f3efe7;
+  --mist-300: #d9d2c6;
+  --sand-400: #c6a25a;
 }
 
 @theme inline {
@@ -22,8 +23,9 @@
   --color-mist-100: var(--mist-100);
   --color-mist-200: var(--mist-200);
   --color-mist-300: var(--mist-300);
-  --font-sans: var(--font-manrope);
-  --font-serif: var(--font-cormorant);
+  --color-sand-400: var(--sand-400);
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-merriweather);
 }
 
 * {
@@ -36,10 +38,10 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(36, 81, 122, 0.14), transparent 34%),
-    var(--background);
+    linear-gradient(180deg, rgba(15, 42, 68, 0.04), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f3efe7 100%);
   color: var(--foreground);
-  font-family: var(--font-manrope), sans-serif;
+  font-family: var(--font-source-sans), sans-serif;
 }
 
 a {
@@ -51,7 +53,23 @@ img {
   max-width: 100%;
 }
 
+.fade-in-hero {
+  animation: hero-fade-in 1.2s ease-out both;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 ::selection {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(198, 162, 90, 0.28);
   color: var(--ocean-950);
 }

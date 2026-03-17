@@ -8,7 +8,7 @@ type InquiryFormProps = {
 };
 
 const fieldClassName =
-  "mt-2 w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-base text-slate-900 outline-none transition-colors duration-300 placeholder:text-slate-400 focus:border-ocean-700";
+  "mt-2 w-full rounded-xl border border-mist-300 bg-white px-4 py-3 text-base text-slate-900 outline-none transition-colors duration-300 placeholder:text-slate-400 focus:border-sand-400";
 
 export default function InquiryForm({
   title,
@@ -19,9 +19,9 @@ export default function InquiryForm({
   return (
     <section className="bg-white py-24 sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
-        <div className="rounded-[2rem] border border-slate-200 bg-mist-100 p-8 shadow-[0_28px_80px_-45px_rgba(15,23,42,0.55)] sm:p-10">
+        <div className="rounded-[1.6rem] border border-mist-300 bg-mist-100 p-8 shadow-[0_16px_42px_-32px_rgba(15,42,68,0.14)] sm:p-10">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-ocean-700">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ocean-800">
               Inquiry Form
             </p>
             <h2 className="mt-4 font-serif text-4xl leading-tight text-ocean-950 sm:text-5xl">
@@ -147,11 +147,11 @@ export default function InquiryForm({
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-sm leading-7 text-slate-500">
-                Submission handling is intentionally not connected yet.
+                Form delivery can be connected in the next phase.
               </p>
               <button
                 type="button"
-                className="inline-flex items-center justify-center rounded-full bg-ocean-950 px-6 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center rounded-full bg-sand-400 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-ocean-950"
               >
                 {submitLabel}
               </button>

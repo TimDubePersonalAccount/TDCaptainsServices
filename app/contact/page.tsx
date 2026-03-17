@@ -12,36 +12,37 @@ export default function ContactPage() {
     <main>
       <PageHero
         eyebrow="Contact"
-        title="Start the conversation with a simple marine support inquiry."
-        description="This page pairs a clean heading section with a form skeleton that can later connect to email delivery, CRM storage, or scheduling logic."
+        title="Get in touch for dependable marine support on the Hudson River."
+        description="Use this page for general inquiries, dockside assistance requests, captain services, and maintenance coordination."
       />
 
       <InquiryForm
         title="Contact TD Captains Services"
-        description="Use this form layout for general questions, service requests, and marina coordination."
+        description="Share the basics about your boat, your location, and what kind of help you need."
         submitLabel="Send Inquiry"
         aside={
-          <div className="space-y-4 rounded-[1.75rem] border border-slate-200 bg-mist-100 p-8 shadow-[0_24px_60px_-45px_rgba(15,23,42,0.55)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-ocean-700">
+          <div className="space-y-4 rounded-[1.35rem] border border-mist-300 bg-mist-100 p-8 shadow-[0_14px_30px_-24px_rgba(15,42,68,0.14)]">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ocean-800">
               Quick Contact
             </p>
             <h2 className="text-3xl font-semibold text-ocean-950">
-              Reach the local dispatch team.
+              Reach the local service team.
             </h2>
             <p className="text-base leading-8 text-slate-600">
-              Add final business contact details here once the live phone,
-              email, and marina coverage notes are ready.
+              This area is ready for live contact details, dispatch notes, and
+              marina coverage information once the final business information is
+              in place.
             </p>
-            <div className="rounded-2xl border border-white/60 bg-white p-5">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
+            <div className="rounded-xl border border-mist-300 bg-white p-5">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
                 Phone
               </p>
               <p className="mt-2 text-xl font-semibold text-ocean-950">
                 {phoneNumber}
               </p>
             </div>
-            <div className="rounded-2xl border border-white/60 bg-white p-5">
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-500">
+            <div className="rounded-xl border border-mist-300 bg-white p-5">
+              <p className="text-[11px] uppercase tracking-[0.18em] text-slate-500">
                 Service Area
               </p>
               <p className="mt-2 text-xl font-semibold text-ocean-950">
