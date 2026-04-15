@@ -11,7 +11,10 @@ export default function Hero() {
         playsInline
         preload="auto"
       >
-        <source src="/Videos/BoatBackgroundVideo.mp4" type="video/mp4" />
+        <source
+          src="/Website_Videos/BoatBackgroundVideo.mp4"
+          type="video/mp4"
+        />
       </video>
 
       <div className="absolute inset-0 bg-black/25" />
@@ -19,9 +22,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_42%)]" />
 
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 -translate-y-[100px]">
-        <div className="fade-in-hero w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[520px]">
+        <div className="fade-in-hero w-full max-w-[300px] sm:max-w-[380px] lg:max-w-[470px]">
           <Image
-            src="/Images/Boat_Logo_transparent.png"
+            src="/Website_Images/Boat_Logo_transparent.png"
             alt="TD Captains Services logo"
             width={1536}
             height={1024}
@@ -33,9 +36,6 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto flex h-full max-w-7xl items-end px-4 pb-14 sm:px-6 lg:px-8 lg:pb-16">
         <div className="max-w-2xl text-white">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/80">
-            Hudson River Marine Services
-          </p>
           <h1 className="mt-4 font-serif text-4xl leading-tight sm:text-5xl lg:text-6xl">
             Dependable marine support on the Hudson River.
           </h1>

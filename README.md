@@ -20,6 +20,16 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Service Request Email Setup
+
+The request form now sends service request emails through SMTP.
+
+1. Copy `.env.example` to `.env.local`.
+2. Fill in `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, and `SMTP_PASS`.
+3. Leave `SERVICE_REQUEST_TO_EMAIL` as `TimmyDube0@gmail.com` or change it if needed later.
+
+For Gmail SMTP, use `smtp.gmail.com`, port `587`, and a Google App Password for `SMTP_PASS`.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

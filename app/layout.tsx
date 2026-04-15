@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | TD Captains Services",
   },
   description:
-    "Reliable Hudson River marine services website built with Next.js, TypeScript, and Tailwind CSS.",
+    "Dependable Hudson River marine support including captain services, launch help, maintenance coordination, towing, repairs, and electronics support.",
 };
 
 export default function RootLayout({

@@ -2,12 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-import {
-  navigationItems,
-  phoneNumber,
-  serviceMenuItems,
-} from "@/components/site-data";
+import { useEffect, useRef, useState } from "react";
+import { navigationItems, phoneNumber } from "@/components/site-data";
+import { serviceMenuItems } from "@/lib/services";
 
 function joinClasses(...classes: Array<string | false>) {
   return classes.filter(Boolean).join(" ");
@@ -17,11 +14,41 @@ const phoneLink = `tel:${phoneNumber.replace(/\D/g, "")}`;
 
 export default function Navbar() {
   const pathname = usePathname();
+  const servicesMenuRef = useRef<HTMLDivElement>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isServicesMobileOpen, setIsServicesMobileOpen] = useState(false);
 
   const isServicesActive = pathname.startsWith("/services/");
+
+  useEffect(() => {
+    if (!isServicesOpen) {
+      return;
+    }
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        servicesMenuRef.current &&
+        !servicesMenuRef.current.contains(event.target as Node)
+      ) {
+        setIsServicesOpen(false);
+      }
+    }
+
+    function handleEscapeKey(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsServicesOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEscapeKey);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isServicesOpen]);
 
   return (
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-6">
@@ -31,7 +58,7 @@ export default function Navbar() {
             <div className="hidden min-w-0 items-center md:flex">
               <Link href="/" className="shrink-0">
                 <span className="font-serif text-xl font-semibold tracking-[0.04em] text-ocean-950 lg:text-2xl">
-                  TD Captain Services
+                  TD Captains Services
                 </span>
               </Link>
 
@@ -48,25 +75,23 @@ export default function Navbar() {
                         className={joinClasses(
                           "rounded-full px-3.5 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                           isActive &&
-                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(198,162,90,0.32)]",
                         )}
                       >
                         {item.label}
                       </Link>
 
                       {index === 0 ? (
-                        <div
-                          className="relative ml-1"
-                          onMouseEnter={() => setIsServicesOpen(true)}
-                          onMouseLeave={() => setIsServicesOpen(false)}
-                        >
+                        <div className="relative ml-1" ref={servicesMenuRef}>
                           <button
                             type="button"
                             aria-label="Toggle services menu"
+                            aria-expanded={isServicesOpen}
+                            aria-haspopup="menu"
                             className={joinClasses(
                               "flex items-center rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                               isServicesActive &&
-                                "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                                "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(198,162,90,0.32)]",
                             )}
                             onClick={() =>
                               setIsServicesOpen((current) => !current)
@@ -133,7 +158,7 @@ export default function Navbar() {
 
             <Link href="/" className="md:hidden">
               <span className="font-serif text-lg font-semibold tracking-[0.04em] text-ocean-950">
-                TD Captain Services
+                TD Captains Services
               </span>
             </Link>
 
@@ -207,7 +232,7 @@ export default function Navbar() {
                         className={joinClasses(
                           "block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                           isActive &&
-                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(198,162,90,0.32)]",
                         )}
                       >
                         {item.label}
@@ -222,7 +247,7 @@ export default function Navbar() {
                               className={joinClasses(
                                 "flex-1 rounded-xl px-4 py-3 text-left text-sm font-semibold text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                                 isServicesActive &&
-                                  "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                                  "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(198,162,90,0.32)]",
                               )}
                               onClick={() =>
                                 setIsServicesMobileOpen((current) => !current)

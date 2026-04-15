@@ -1,15 +1,12 @@
 import Link from "next/link";
-import {
-  navigationItems,
-  phoneNumber,
-  serviceItems,
-} from "@/components/site-data";
+import { navigationItems, phoneNumber } from "@/components/site-data";
+import { getServiceHref, services } from "@/lib/services";
 
 const phoneLink = `tel:${phoneNumber.replace(/\D/g, "")}`;
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ocean-900/40 bg-ocean-950 text-white">
+    <footer className="border-t border-sand-400/30 bg-ocean-950 text-white">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr]">
           <div className="max-w-xl">
@@ -68,10 +65,14 @@ export default function Footer() {
               Featured Services
             </p>
             <div className="mt-5 space-y-3">
-              {serviceItems.slice(0, 4).map((item) => (
-                <p key={item.title} className="text-base text-[#f3efe7]">
-                  {item.title}
-                </p>
+              {services.slice(0, 4).map((service) => (
+                <Link
+                  key={service.slug}
+                  href={getServiceHref(service.slug)}
+                  className="block text-base text-[#f3efe7] transition-colors duration-300 hover:text-white"
+                >
+                  {service.title}
+                </Link>
               ))}
             </div>
           </div>

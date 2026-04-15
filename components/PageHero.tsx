@@ -10,7 +10,7 @@ export default function PageHero({
   description,
 }: PageHeroProps) {
   return (
-    <section className="border-b border-ocean-900 bg-ocean-950">
+    <section className="border-b border-sand-400/50 bg-ocean-950">
       <div className="mx-auto max-w-7xl px-4 pb-14 pt-34 sm:px-6 md:pt-38 lg:px-8 lg:pb-16">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-mist-200">
           {eyebrow}

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import HowItWorksStrip from "@/components/HowItWorksStrip";
 import ServicesGrid from "@/components/ServicesGrid";
@@ -45,12 +46,12 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              <a
+              <Link
                 href="/request-service"
-                className="inline-flex w-full items-center justify-center rounded-full bg-ocean-950 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-ocean-900"
+                className="inline-flex w-full items-center justify-center rounded-full bg-ocean-950 px-6 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-sand-400 hover:text-ocean-950"
               >
                 Start a Service Request
-              </a>
+              </Link>
             </div>
           </div>
         </div>

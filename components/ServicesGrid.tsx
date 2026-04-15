@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { serviceItems } from "@/components/site-data";
 import SectionHeading from "@/components/SectionHeading";
+import { getServiceHref, services } from "@/lib/services";
 
 type ServicesGridProps = {
   eyebrow?: string;
@@ -23,9 +23,9 @@ export default function ServicesGrid({
         />
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          {serviceItems.map((service, index) => (
+          {services.map((service, index) => (
             <article
-              key={service.title}
+              key={service.slug}
               className="group flex h-full flex-col rounded-[1.35rem] border border-mist-300 bg-white p-6 shadow-[0_14px_30px_-24px_rgba(15,42,68,0.14)] transition-colors duration-300 hover:border-sand-400/70"
             >
               <div className="flex items-center justify-between gap-4">
@@ -41,14 +41,14 @@ export default function ServicesGrid({
                 {service.title}
               </h3>
               <p className="mt-3 flex-1 text-base leading-7 text-slate-600">
-                {service.description}
+                {service.summary}
               </p>
 
               <Link
-                href="/request-service"
+                href={getServiceHref(service.slug)}
                 className="mt-6 inline-flex items-center text-sm font-semibold text-ocean-800 transition-colors duration-300 group-hover:text-ocean-950"
               >
-                Request Service
+                View Service
               </Link>
             </article>
           ))}

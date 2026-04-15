@@ -31,25 +31,25 @@ export default function TrustSection() {
                 key={item.title}
                 className={`rounded-[1.35rem] border p-7 shadow-[0_14px_30px_-24px_rgba(15,42,68,0.14)] ${
                   index === 2
-                    ? "border-ocean-900 bg-ocean-900 text-white sm:col-span-2"
+                    ? "border-sand-400 bg-sand-400 text-ocean-950 sm:col-span-2"
                     : "border-mist-300 bg-white text-slate-900"
                 }`}
               >
                 <div
                   className={`h-1.5 w-12 rounded-full ${
-                    index === 2 ? "bg-sand-400" : "bg-sand-400/80"
+                    index === 2 ? "bg-ocean-950" : "bg-sand-400/80"
                   }`}
                 />
                 <h3
                   className={`mt-5 text-2xl font-semibold ${
-                    index === 2 ? "text-white" : "text-ocean-950"
+                    index === 2 ? "text-ocean-950" : "text-ocean-950"
                   }`}
                 >
                   {item.title}
                 </h3>
                 <p
                   className={`mt-3 text-base leading-8 ${
-                    index === 2 ? "text-[#f3efe7]" : "text-slate-600"
+                    index === 2 ? "text-slate-700" : "text-slate-600"
                   }`}
                 >
                   {item.description}
