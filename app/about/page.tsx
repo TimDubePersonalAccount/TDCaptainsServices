@@ -3,23 +3,25 @@ import PageHero from "@/components/PageHero";
 
 export const metadata: Metadata = {
   title: "About",
+  description:
+    "Learn about TD Captains Services and the dependable Hudson River captain support, launch help, maintenance coordination, and marine service approach behind the company.",
 };
 
 const pillars = [
   {
-    title: "Local Hudson River Experts",
+    title: "Local Hudson River Familiarity",
     description:
-      "Use this section to show service-area familiarity, marina knowledge, and day-to-day boating experience on the river.",
+      "Practical knowledge of marinas, launch points, river conditions, and day-to-day boating logistics helps jobs move faster and more smoothly.",
   },
   {
-    title: "Fast Mobile Marine Support",
+    title: "Responsive Mobile Support",
     description:
-      "Position the company around responsive communication, practical dockside help, and dependable follow-through.",
+      "The focus is on showing up prepared, communicating clearly, and adapting to the real condition of the boat and the day.",
   },
   {
-    title: "Professional, Reliable Service",
+    title: "Professional Follow-Through",
     description:
-      "Create space for certifications, captain credentials, and the kind of steady client care that earns repeat business.",
+      "Boat owners get straightforward updates, realistic next steps, and respectful service around the dock, marina, and onboard systems.",
   },
 ];
 
@@ -29,7 +31,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A marine services company built around dependable work and clear communication."
-        description="This page is designed to tell the company story, highlight local experience, and reinforce the kind of steady professionalism boat owners want to hire."
+        description="TD Captains Services is built to give boat owners steady support, clear updates, and practical help on the Hudson River."
       />
 
       <section className="bg-white py-24 sm:py-28">
@@ -39,18 +41,21 @@ export default function AboutPage() {
               Company Story
             </p>
             <h2 className="mt-4 font-serif text-4xl leading-tight text-ocean-950 sm:text-5xl">
-              A straightforward, trustworthy foundation for TD Captains Services.
+              Dependable support for the jobs that keep boat ownership moving.
             </h2>
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-600">
               <p>
-                Use this area to describe the company mission, who you serve,
-                and the standards you bring to captain services, maintenance
-                support, and dockside assistance.
+                TD Captains Services is built around reliable marine support for
+                owners who want clear communication and steady follow-through.
+                From captain services and launch-day help to maintenance
+                coordination and troubleshooting, the goal is to make every job
+                feel more manageable from the start.
               </p>
               <p>
-                The layout gives you room to add certifications, staff bios,
-                testimonials, and operating history while keeping the tone clean
-                and grounded.
+                Some requests are planned well in advance and others come up
+                fast. Either way, the approach stays the same: show up
+                prepared, explain the next step clearly, and treat the boat,
+                crew, and marina with care.
               </p>
             </div>
           </div>

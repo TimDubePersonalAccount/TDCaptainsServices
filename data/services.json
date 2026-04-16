@@ -1,0 +1,280 @@
+{
+  "services": [
+    {
+      "slug": "captain-for-hire",
+      "title": "Captain For Hire",
+      "label": "Navigation",
+      "summary": "Experienced helm support for owner outings, training runs, commercial work, and planned vessel moves.",
+      "menuDescription": "Professional captain support for charters, training, deliveries, and owner assistance.",
+      "description": "Professional captain support for charters, instruction, deliveries, and vessel oversight throughout the NYC Hudson River area.",
+      "highlights": [
+        "Owner-assisted outings",
+        "Training and familiarization trips",
+        "Planned vessel movements",
+        "Docking and navigation support"
+      ],
+      "subservicesTitle": "Captain For Hire Services",
+      "subservicesEyebrow": "Captain Support",
+      "subservices": [
+        {
+          "slug": "owner-outings",
+          "title": "Owner-Assisted Outings",
+          "description": "Bring on a licensed captain for day trips, guest outings, and confidence at the helm while you stay involved."
+        },
+        {
+          "slug": "commercial-charter-support",
+          "title": "Commercial Charter Support",
+          "description": "Hire one of our captained boats to support film work, inspections, transportation, or other commercial needs by the hour."
+        },
+        {
+          "slug": "instruction",
+          "title": "Instruction",
+          "description": "Hands-on instruction for boat handling, docking, local navigation, safety procedures, and electronics operation."
+        },
+        {
+          "slug": "delivery",
+          "title": "Delivery",
+          "description": "Captain and crew support to move your vessel safely between ports with route planning and steady communication."
+        },
+        {
+          "slug": "maintenance-captain",
+          "title": "Maintenance Captain",
+          "description": "Oversight for service scheduling, yard coordination, sea trials, and upgrade projects when your boat needs a captain on the ground."
+        }
+      ]
+    },
+    {
+      "slug": "launch-service",
+      "title": "Launch Service",
+      "label": "Dockside",
+      "summary": "Dockside help and launch-day preparation for a smoother departure and more confidence from the start.",
+      "menuDescription": "Dockside help, launch prep, and departure-day coordination for a smooth start.",
+      "description": "Launch-day help built around preparation, dockside coordination, and a smoother departure from the start.",
+      "highlights": [
+        "Pre-departure checks",
+        "Dock handling support",
+        "Launch-day coordination",
+        "Owner confidence and walkthroughs"
+      ],
+      "subservicesTitle": "Launch-Day Support",
+      "subservicesEyebrow": "Dockside Services",
+      "subservices": [
+        {
+          "slug": "pre-launch-prep",
+          "title": "Pre-Launch Prep",
+          "description": "Hands-on support with lines, fenders, batteries, fluids, and final readiness before your boat leaves the dock."
+        },
+        {
+          "slug": "dock-handling",
+          "title": "Dock Handling Assistance",
+          "description": "Experienced help with line handling, maneuvering in tight marinas, and getting underway cleanly."
+        },
+        {
+          "slug": "systems-walkthrough",
+          "title": "Systems Walkthrough",
+          "description": "A practical launch-day review of onboard systems, controls, and safety gear so owners feel ready to go."
+        },
+        {
+          "slug": "departure-coordination",
+          "title": "Departure Coordination",
+          "description": "Coordination with marina staff, trailers, travel lifts, or your crew to keep the day moving smoothly."
+        }
+      ]
+    },
+    {
+      "slug": "maintenance",
+      "title": "Maintenance",
+      "label": "Care",
+      "summary": "Routine vessel care and seasonal upkeep to keep your boat clean, prepared, and ready to use.",
+      "menuDescription": "Routine vessel care, cleaning, and seasonal maintenance planning throughout the season.",
+      "description": "Routine vessel care and maintenance planning to help keep your boat prepared, clean, and ready for the season.",
+      "highlights": [
+        "Seasonal maintenance planning",
+        "Routine vessel care",
+        "Cleaning and upkeep coordination",
+        "Follow-up maintenance visits"
+      ],
+      "subservicesTitle": "Maintenance Services",
+      "subservicesEyebrow": "Routine Care",
+      "subservices": [
+        {
+          "slug": "oil-change",
+          "title": "Oil Change",
+          "description": "Routine oil and filter service to help keep your engine protected and ready for the season."
+        },
+        {
+          "slug": "washing-and-detailing",
+          "title": "Washing and Detailing",
+          "description": "Exterior washdowns, interior cleanup, and appearance-focused care that keeps your boat looking sharp."
+        },
+        {
+          "slug": "seasonal-commissioning",
+          "title": "Seasonal Commissioning",
+          "description": "Spring startup and seasonal readiness checks for batteries, systems, safety gear, and general preparation."
+        },
+        {
+          "slug": "bottom-paint-and-repainting",
+          "title": "Bottom Paint and Repainting",
+          "description": "Coordination and support for repainting, bottom paint work, and cosmetic refresh projects."
+        },
+        {
+          "slug": "fluid-and-battery-checks",
+          "title": "Fluid and Battery Checks",
+          "description": "Regular checks for batteries, bilge systems, fluids, and other core maintenance items that are easy to miss."
+        }
+      ]
+    },
+    {
+      "slug": "boat-repair",
+      "title": "Boat Repair",
+      "label": "Repair",
+      "summary": "Troubleshooting and repair coordination when something needs attention fast and you want a clear plan.",
+      "menuDescription": "Mechanical troubleshooting, repair coordination, and follow-through when systems need attention.",
+      "description": "Boat repair support focused on troubleshooting, service coordination, and practical next steps when your vessel needs attention.",
+      "highlights": [
+        "Mechanical troubleshooting",
+        "Repair scope coordination",
+        "Clear communication on next steps",
+        "Follow-up after service"
+      ],
+      "subservicesTitle": "Repair Support",
+      "subservicesEyebrow": "Boat Repairs",
+      "subservices": [
+        {
+          "slug": "mechanical-troubleshooting",
+          "title": "Mechanical Troubleshooting",
+          "description": "Hands-on diagnostics for common engine and mechanical issues to identify the problem before repairs begin."
+        },
+        {
+          "slug": "pump-and-plumbing-repairs",
+          "title": "Pump and Plumbing Repairs",
+          "description": "Support for bilge pumps, washdown systems, plumbing lines, and other onboard water-related systems."
+        },
+        {
+          "slug": "steering-and-control-repairs",
+          "title": "Steering and Control Repairs",
+          "description": "Assessment and repair coordination for steering systems, throttle controls, and related hardware."
+        },
+        {
+          "slug": "cosmetic-repair-coordination",
+          "title": "Cosmetic Repair Coordination",
+          "description": "Help organizing fiberglass, gelcoat, trim, and finish work when your boat needs cosmetic attention."
+        }
+      ]
+    },
+    {
+      "slug": "marine-electronics",
+      "title": "Marine Electronics",
+      "label": "Systems",
+      "summary": "Installation, upgrades, and diagnostics for onboard systems and electronics that need to work when you need them.",
+      "menuDescription": "Electronics installs, upgrades, troubleshooting, and onboard diagnostics support.",
+      "description": "Onboard electronics support for installs, upgrades, troubleshooting, and practical system improvements.",
+      "highlights": [
+        "Electronics installs and upgrades",
+        "System troubleshooting",
+        "Navigation equipment support",
+        "Onboard diagnostics coordination"
+      ],
+      "subservicesTitle": "Electronics Services",
+      "subservicesEyebrow": "Onboard Systems",
+      "subservices": [
+        {
+          "slug": "chartplotter-installation",
+          "title": "Chartplotter Installation",
+          "description": "Install and configure chartplotters and navigation displays so critical information is easy to access underway."
+        },
+        {
+          "slug": "vhf-and-radio-setup",
+          "title": "VHF and Radio Setup",
+          "description": "Install, replace, or reconfigure radio systems for dependable communication and safer operation."
+        },
+        {
+          "slug": "sonar-and-fish-finder-upgrades",
+          "title": "Sonar and Fish Finder Upgrades",
+          "description": "Upgrade sonar and fish finder equipment with practical guidance on fit, layout, and system integration."
+        },
+        {
+          "slug": "electronics-diagnostics",
+          "title": "Electronics Diagnostics",
+          "description": "Troubleshoot wiring, displays, sensors, and networked systems when electronics stop behaving the way they should."
+        }
+      ]
+    },
+    {
+      "slug": "drone-aerial-photography",
+      "title": "Drone Aerial Photography",
+      "label": "Media",
+      "summary": "Clean aerial photos and video for listings, inspections, waterfront documentation, and marina visuals.",
+      "menuDescription": "Aerial photo and video support for listings, inspections, marina views, and documentation.",
+      "description": "Drone aerial photography services for vessel listings, inspections, progress updates, and polished waterfront visuals.",
+      "highlights": [
+        "Aerial listing photos",
+        "Inspection imagery",
+        "Marina and waterfront coverage",
+        "Progress documentation"
+      ],
+      "subservicesTitle": "Aerial Media Services",
+      "subservicesEyebrow": "Drone Coverage",
+      "subservices": [
+        {
+          "slug": "listing-photography",
+          "title": "Listing Photography",
+          "description": "High-angle photos and video to present your vessel clearly for private sale, broker listings, or marketing materials."
+        },
+        {
+          "slug": "inspection-imagery",
+          "title": "Inspection Imagery",
+          "description": "Aerial views that support inspections, condition documentation, and a clearer look at access-limited areas."
+        },
+        {
+          "slug": "waterfront-property-coverage",
+          "title": "Waterfront Coverage",
+          "description": "Aerial photo and video packages for docks, marinas, waterfront access, and surrounding property context."
+        },
+        {
+          "slug": "project-progress-documentation",
+          "title": "Project Progress Documentation",
+          "description": "Repeat aerial captures to document maintenance work, marina improvements, or seasonal project milestones."
+        }
+      ]
+    },
+    {
+      "slug": "towing-services",
+      "title": "Towing Services",
+      "label": "Support",
+      "summary": "Responsive towing help when your vessel needs prompt attention, local coordination, and dependable assistance.",
+      "menuDescription": "Fast local towing support when your vessel needs prompt, dependable help.",
+      "description": "Responsive towing support when a vessel needs prompt attention, local coordination, and dependable assistance.",
+      "highlights": [
+        "Emergency towing response",
+        "Local coordination support",
+        "Dockside follow-up assistance",
+        "Clear communication during service"
+      ],
+      "subservicesTitle": "Towing Support",
+      "subservicesEyebrow": "On-Water Assistance",
+      "subservices": [
+        {
+          "slug": "emergency-tow",
+          "title": "Emergency Tow",
+          "description": "Prompt towing support when your boat is disabled and needs safe transport to a dock, marina, or service point."
+        },
+        {
+          "slug": "disabled-vessel-assistance",
+          "title": "Disabled Vessel Assistance",
+          "description": "On-water help for breakdowns, loss of power, and situations where your vessel needs practical immediate support."
+        },
+        {
+          "slug": "marina-relocation",
+          "title": "Marina-to-Marina Relocation",
+          "description": "Assistance moving a vessel between marinas or service locations when running under its own power is not the best option."
+        },
+        {
+          "slug": "dockside-recovery-coordination",
+          "title": "Dockside Recovery Coordination",
+          "description": "Follow-up coordination once a tow is complete so the next repair, haul-out, or dockside step is already in motion."
+        }
+      ]
+    }
+  ]
+}

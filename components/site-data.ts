@@ -1,98 +1,11 @@
 export const navigationItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
   { href: "/request-service", label: "Request Service" },
-];
-
-export const serviceMenuItems = [
-  {
-    href: "/services/captain-for-hire",
-    label: "Captain For Hire",
-    description: "Professional helm support for private trips and owner assistance.",
-  },
-  {
-    href: "/services/launch-service",
-    label: "Launch Service",
-    description: "Dockside help and launch-day preparation for a smooth departure.",
-  },
-  {
-    href: "/services/maintenance",
-    label: "Maintenance",
-    description: "Routine vessel care and maintenance planning throughout the season.",
-  },
-  {
-    href: "/services/towing-services",
-    label: "Towing Services",
-    description: "Responsive support when your vessel needs prompt towing assistance.",
-  },
-  {
-    href: "/services/marine-electronics",
-    label: "Marine Electronics",
-    description: "Electronics upgrades, installs, and onboard diagnostics support.",
-  },
+  { href: "/contact", label: "Contact" },
 ];
 
 export const phoneNumber = "(845) 555-0186";
-
-export const serviceItems = [
-  {
-    title: "Captain for Hire",
-    description:
-      "Experienced helm support for owner outings, training runs, and planned vessel moves.",
-    label: "Navigation",
-    href: "/services/captain-for-hire",
-    requestValue: "captain-for-hire",
-  },
-  {
-    title: "Launch Assistance",
-    description:
-      "Dock handling and launch-day support to get your boat off the line smoothly.",
-    label: "Dockside",
-    href: "/services/launch-service",
-    requestValue: "launch-service",
-  },
-  {
-    title: "Boat Cleaning & Maintenance",
-    description:
-      "Routine cleaning and seasonal upkeep to keep your boat ready to use.",
-    label: "Care",
-    href: "/services/maintenance",
-    requestValue: "maintenance",
-  },
-  {
-    title: "Boat Repair",
-    description:
-      "Troubleshooting and repair coordination when something needs attention fast.",
-    label: "Repair",
-    href: "/request-service?service=boat-repair",
-    requestValue: "boat-repair",
-  },
-  {
-    title: "Marine Electronics",
-    description:
-      "Installation, upgrades, and diagnostics for onboard systems and electronics.",
-    label: "Systems",
-    href: "/services/marine-electronics",
-    requestValue: "marine-electronics",
-  },
-  {
-    title: "Drone Aerial Photography",
-    description:
-      "Clean aerial photos for listings, inspections, marina views, and documentation.",
-    label: "Media",
-    href: "/request-service?service=drone-photography",
-    requestValue: "drone-photography",
-  },
-  {
-    title: "Towing Services",
-    description:
-      "Fast local towing support when you need safe, dependable help on short notice.",
-    label: "Support",
-    href: "/services/towing-services",
-    requestValue: "towing-services",
-  },
-];
 
 export const processSteps = [
   {
