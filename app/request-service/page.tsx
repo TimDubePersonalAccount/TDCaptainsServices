@@ -35,21 +35,23 @@ export default async function RequestServicePage({
         submitLabel="Request Service"
         initialRequestedService={initialRequestedService}
         aside={
-          <div className="rounded-[1.35rem] bg-ocean-950 p-8 text-white shadow-[0_18px_40px_-30px_rgba(15,42,68,0.18)]">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#f3efe7]">
+          <div className="rounded-[1.6rem] border border-mist-300 bg-mist-100 p-8 text-ocean-950 shadow-[0_16px_42px_-32px_rgba(15,42,68,0.14)] sm:p-10">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ocean-800">
               What To Expect
             </p>
             <div className="mt-6 space-y-5">
               {processSteps.map((step, index) => (
                 <div
                   key={step.title}
-                  className="flex gap-4 rounded-xl border border-white/10 bg-white/5 p-4"
+                  className="flex gap-4 rounded-xl border border-ocean-900 bg-ocean-950 p-4"
                 >
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-sand-400 text-sm font-semibold text-white">
                     0{index + 1}
                   </div>
                   <div>
-                    <h2 className="text-lg font-semibold">{step.title}</h2>
+                    <h2 className="text-lg font-semibold text-white">
+                      {step.title}
+                    </h2>
                     <p className="mt-1 text-sm leading-7 text-[#f3efe7]">
                       {step.description}
                     </p>

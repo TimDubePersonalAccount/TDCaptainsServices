@@ -18,7 +18,6 @@ export default function CaptainForHirePage() {
         "Planned vessel movements",
         "Docking and navigation support",
       ]}
-      subservicesTitle="Captain For Hire Services"
       subservices={[
         {
           title: "Captain For Hire",
