@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import {
   escapeHtml,
+  getMailDebugConfig,
   getMailRecipient,
   getMailSender,
   getMailTransporter,
@@ -19,6 +20,8 @@ type ContactPayload = {
 
 export async function POST(request: Request) {
   try {
+    console.log("[contact] incoming request");
+
     const body = (await request.json()) as ContactPayload;
     const fields = {
       name: body.name?.toString().trim() ?? "",
@@ -53,7 +56,11 @@ export async function POST(request: Request) {
     const fromEmail = getMailSender();
     const toEmail = getMailRecipient();
 
-    await transporter.sendMail({
+    console.log("[contact] mail config", getMailDebugConfig());
+    await transporter.verify();
+    console.log("[contact] smtp verify succeeded");
+
+    const result = await transporter.sendMail({
       from: fromEmail,
       to: toEmail,
       replyTo: fields.email,
@@ -84,9 +91,33 @@ export async function POST(request: Request) {
       `,
     });
 
+    console.log("[contact] email sent", {
+      messageId: result.messageId,
+      accepted: result.accepted,
+      rejected: result.rejected,
+      response: result.response,
+    });
+
     return NextResponse.json({ message: "Inquiry sent successfully." });
   } catch (error) {
-    console.error("Contact inquiry email failed", error);
+    const details =
+      error instanceof Error
+        ? {
+            message: error.message,
+            name: error.name,
+            stack: error.stack,
+            code: "code" in error ? String(error.code) : undefined,
+            command: "command" in error ? String(error.command) : undefined,
+            response:
+              "response" in error ? String(error.response) : undefined,
+            responseCode:
+              "responseCode" in error
+                ? String(error.responseCode)
+                : undefined,
+          }
+        : { message: String(error) };
+
+    console.error("[contact] inquiry email failed", details);
 
     return NextResponse.json(
       { message: "Unable to send the inquiry email." },
