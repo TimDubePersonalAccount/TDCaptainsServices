@@ -53,3 +53,37 @@ export function getMailSender() {
 export function getMailRecipient() {
   return readRequiredEnv("SERVICE_REQUEST_TO_EMAIL");
 }
+
+function maskEmail(value: string) {
+  const [localPart = "", domain = ""] = value.split("@");
+
+  if (!domain) {
+    return "***";
+  }
+
+  if (localPart.length <= 2) {
+    return `${localPart[0] ?? "*"}***@${domain}`;
+  }
+
+  return `${localPart.slice(0, 2)}***@${domain}`;
+}
+
+export function getMailDebugConfig() {
+  const host = process.env.SMTP_HOST ?? null;
+  const port = process.env.SMTP_PORT ?? null;
+  const secure = process.env.SMTP_SECURE ?? null;
+  const user = process.env.SMTP_USER ?? null;
+  const from = process.env.SERVICE_REQUEST_FROM_EMAIL ?? null;
+  const to = process.env.SERVICE_REQUEST_TO_EMAIL ?? null;
+
+  return {
+    host,
+    port,
+    secure,
+    hasUser: Boolean(user),
+    user: user ? maskEmail(user) : null,
+    from: from ? maskEmail(from) : null,
+    to: to ? maskEmail(to) : null,
+    hasPassword: Boolean(process.env.SMTP_PASS),
+  };
+}
