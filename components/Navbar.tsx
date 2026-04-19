@@ -48,7 +48,7 @@ export default function Navbar() {
                         className={joinClasses(
                           "rounded-full px-3.5 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                           isActive &&
-                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(15,42,68,0.28)]",
                         )}
                       >
                         {item.label}
@@ -66,7 +66,7 @@ export default function Navbar() {
                             className={joinClasses(
                               "flex items-center rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                               isServicesActive &&
-                                "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                                "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(15,42,68,0.28)]",
                             )}
                             onClick={() =>
                               setIsServicesOpen((current) => !current)
@@ -207,7 +207,7 @@ export default function Navbar() {
                         className={joinClasses(
                           "block rounded-xl px-4 py-3 text-sm font-semibold text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                           isActive &&
-                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                            "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(15,42,68,0.28)]",
                         )}
                       >
                         {item.label}
@@ -222,7 +222,7 @@ export default function Navbar() {
                               className={joinClasses(
                                 "flex-1 rounded-xl px-4 py-3 text-left text-sm font-semibold text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                                 isServicesActive &&
-                                  "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(179,33,43,0.28)]",
+                                  "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(15,42,68,0.28)]",
                               )}
                               onClick={() =>
                                 setIsServicesMobileOpen((current) => !current)

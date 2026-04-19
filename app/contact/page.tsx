@@ -20,6 +20,7 @@ export default function ContactPage() {
         title="Contact TD Captains Services"
         description="Share the basics about your boat, your location, and what kind of help you need."
         submitLabel="Send Inquiry"
+        mode="contact"
         aside={
           <div className="space-y-4 rounded-[1.35rem] border border-mist-300 bg-mist-100 p-8 shadow-[0_14px_30px_-24px_rgba(15,42,68,0.14)]">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ocean-800">

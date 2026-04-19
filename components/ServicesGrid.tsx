@@ -14,7 +14,7 @@ export default function ServicesGrid({
   description = "Captain support, launch help, seasonal upkeep, repairs, electronics, towing, and more. Everything is laid out clearly so you can find the right service fast.",
 }: ServicesGridProps) {
   return (
-    <section className="bg-white py-24 sm:py-28">
+    <section className="bg-white py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={eyebrow}
@@ -22,7 +22,7 @@ export default function ServicesGrid({
           description={description}
         />
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {serviceItems.map((service, index) => (
             <Link
               key={service.title}
