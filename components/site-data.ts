@@ -33,7 +33,7 @@ export const serviceMenuItems = [
   },
 ];
 
-export const phoneNumber = "(845) 555-0186";
+export const phoneNumber = "(845) 535-4288";
 
 export const serviceItems = [
   {

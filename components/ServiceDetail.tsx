@@ -86,9 +86,9 @@ export default function ServiceDetail({
         <section className="bg-mist-100 py-14 sm:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ocean-800">
+              <h2 className="font-serif text-3xl leading-tight text-ocean-950 sm:text-4xl">
                 {subservicesEyebrow}
-              </p>
+              </h2>
             </div>
 
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">

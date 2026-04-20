@@ -16,10 +16,10 @@ export default function SubserviceTile({
       <h3 className="text-2xl font-semibold text-ocean-950">{title}</h3>
       <p className="mt-4 text-base leading-8 text-slate-600">{description}</p>
 
-      <div className="mt-auto flex justify-end pt-8">
+      <div className="mt-auto flex justify-end pt-5">
         <Link
           href={requestHref}
-          className="inline-flex items-center justify-center rounded-full bg-ocean-950 px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:bg-ocean-900"
+          className="inline-flex items-center justify-center rounded-full bg-ocean-950 px-4 py-2.5 text-xs font-semibold text-white transition-colors duration-300 hover:bg-ocean-900 sm:text-sm"
         >
           Request Service
         </Link>

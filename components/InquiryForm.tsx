@@ -149,7 +149,7 @@ export default function InquiryForm({
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="(555) 555-5555"
+                  placeholder="(845) 535-4288"
                   className={fieldClassName}
                   required
                 />
