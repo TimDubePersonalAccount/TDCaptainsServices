@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TD Captains Services
 
-## Getting Started
+Marine services website for Troy Dube, built by Tim Dube with Next.js, React, TypeScript, and Tailwind CSS. Hosted on Vercel according to the project owner.
 
-First, run the development server:
+- Website: https://www.tdcaptainservicescorp.com/
+- Repository: https://github.com/TimDubePersonalAccount/TDCaptainsServices
+- Start with [ProjectInfo.md](ProjectInfo.md) for the project map and [HANDOFF.md](HANDOFF.md) for the full owner/AI handoff, history, configuration, and known issues.
+- Coding assistants should read [AGENTS.md](AGENTS.md).
 
-```bash
+## Local setup
+
+Clone the repository and select `main`, then run from the folder containing package.json:
+
+```sh
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000. Copy `.env.example` to `.env.local` and fill in real SMTP settings privately to enable inquiry email. Without those values the pages can be inspected, but valid email submissions will fail. Do not commit credentials.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Validation and production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run lint
+npm run build
+npm start
+```
 
-## Learn More
+There is no dedicated test suite yet. The handoff documents record the checks performed, a local Google Fonts TLS workaround, and the remaining manual checks. Build success does not verify email delivery or the live website.
 
-To learn more about Next.js, take a look at the following resources:
+The forms send email via Node.js API routes; this is not a static-only site. Configure SMTP variables separately in Vercel. Verify the actual Vercel production branch before publishing: a push to that branch may deploy the live website.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Branches
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Use `main` for ongoing work. `Reformating_Website` contains the website edits and handoff integration source. `Development` and `Features` are historical. `handoff/legacy-main-2026-10-29` preserves the older divergent local implementation; its JSON-driven services and mail defaults are not the current main architecture.

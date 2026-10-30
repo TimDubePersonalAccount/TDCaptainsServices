@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
+  emergencyHotline,
   navigationItems,
   phoneNumber,
   serviceMenuItems,
@@ -14,6 +15,7 @@ function joinClasses(...classes: Array<string | false>) {
 }
 
 const phoneLink = `tel:${phoneNumber.replace(/\D/g, "")}`;
+const emergencyPhoneLink = `tel:${emergencyHotline.replace(/\D/g, "")}`;
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -27,26 +29,36 @@ export default function Navbar() {
     <header className="pointer-events-none fixed inset-x-0 top-0 z-50 px-3 sm:px-6">
       <div className="pointer-events-auto mx-auto max-w-7xl">
         <div className="rounded-b-[1.2rem] border border-t-0 border-mist-300 bg-[rgba(255,255,255,0.97)] shadow-[0_14px_30px_-24px_rgba(15,42,68,0.16)] backdrop-blur-sm">
-          <div className="flex items-center justify-between gap-3 px-4 py-3 md:px-5 lg:px-7 lg:py-3.5">
-            <div className="hidden min-w-0 items-center md:flex">
-              <Link href="/" className="shrink-0">
-                <span className="font-serif text-xl font-semibold tracking-[0.04em] text-ocean-950 lg:text-2xl">
-                  TD Captain Services
-                </span>
-              </Link>
+          <div className="px-4 py-3 sm:px-5 lg:px-7 lg:py-3.5">
+            <div className="hidden min-w-0 items-center lg:grid lg:grid-cols-[17rem_minmax(0,1fr)_15rem] lg:gap-6 xl:grid-cols-[18rem_minmax(0,1fr)_15rem] xl:gap-8">
+              <div className="justify-self-start text-center">
+                <Link href="/" className="block">
+                  <span className="font-serif text-[1.35rem] font-semibold leading-none tracking-[0.04em] text-ocean-950 xl:text-[1.55rem]">
+                    TD Captains Services
+                  </span>
+                </Link>
+                <a
+                  href={phoneLink}
+                  className="mt-2 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-slate-600 transition-colors duration-300 hover:text-ocean-950"
+                >
+                  <span>Call Us</span>
+                  <span>{phoneNumber}</span>
+                </a>
+              </div>
 
-              <div className="mx-4 h-8 w-px bg-mist-300" aria-hidden="true" />
-
-              <nav aria-label="Primary" className="flex items-center gap-1">
+              <nav
+                aria-label="Primary"
+                className="grid min-w-0 grid-cols-5 items-center gap-2 rounded-full border border-mist-300 bg-white/90 px-2 py-1 shadow-[0_14px_30px_-28px_rgba(15,42,68,0.34)]"
+              >
                 {navigationItems.map((item, index) => {
                   const isActive = pathname === item.href;
 
                   return (
-                    <div key={item.href} className="flex items-center">
+                    <div key={item.href} className="contents">
                       <Link
                         href={item.href}
                         className={joinClasses(
-                          "rounded-full px-3.5 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
+                          "inline-flex min-w-0 items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-center text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                           isActive &&
                             "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(15,42,68,0.28)]",
                         )}
@@ -56,7 +68,7 @@ export default function Navbar() {
 
                       {index === 0 ? (
                         <div
-                          className="relative ml-1"
+                          className="relative flex min-w-0"
                           onMouseEnter={() => setIsServicesOpen(true)}
                           onMouseLeave={() => setIsServicesOpen(false)}
                         >
@@ -64,13 +76,11 @@ export default function Navbar() {
                             type="button"
                             aria-label="Toggle services menu"
                             className={joinClasses(
-                              "flex items-center rounded-full px-3 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
+                              "inline-flex w-full min-w-0 items-center justify-center whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-slate-700 transition-colors duration-300 hover:bg-mist-100 hover:text-ocean-950",
                               isServicesActive &&
                                 "bg-mist-100 text-ocean-950 shadow-[inset_0_0_0_1px_rgba(15,42,68,0.28)]",
                             )}
-                            onClick={() =>
-                              setIsServicesOpen((current) => !current)
-                            }
+                            onClick={() => setIsServicesOpen(true)}
                           >
                             <span>Services</span>
                             <svg
@@ -129,62 +139,81 @@ export default function Navbar() {
                   );
                 })}
               </nav>
+
+              <div className="justify-self-end">
+                <a
+                  href={emergencyPhoneLink}
+                  className="group flex w-full items-center rounded-[1.15rem] border border-[#b91c1c] bg-[#b91c1c] px-4 py-3 text-white shadow-[0_18px_34px_-22px_rgba(127,29,29,0.65)] transition-all duration-300 hover:-translate-y-px hover:bg-[#991b1b] hover:shadow-[0_22px_38px_-22px_rgba(127,29,29,0.75)]"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/45 bg-white text-[#b91c1c] shadow-sm transition-transform duration-300 group-hover:scale-105">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4.5 w-4.5"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72l.32 2.57a2 2 0 0 1-.57 1.74L7.1 9.8a16 16 0 0 0 7.1 7.1l1.77-1.76a2 2 0 0 1 1.74-.57l2.57.32A2 2 0 0 1 22 16.92Z" />
+                      </svg>
+                    </span>
+                    <span className="text-left">
+                      <span className="block text-[9px] font-semibold uppercase tracking-[0.22em] text-white">
+                        Emergency Hotline
+                      </span>
+                      <span className="mt-1 block text-sm font-semibold leading-tight text-white">
+                        {emergencyHotline}
+                      </span>
+                    </span>
+                  </span>
+                </a>
+              </div>
             </div>
 
-            <Link href="/" className="md:hidden">
-              <span className="font-serif text-lg font-semibold tracking-[0.04em] text-ocean-950">
-                TD Captain Services
-              </span>
-            </Link>
+            <div className="flex items-center justify-between gap-3 lg:hidden">
+              <Link href="/" className="min-w-0">
+                <span className="block truncate font-serif text-lg font-semibold tracking-[0.04em] text-ocean-950">
+                  TD Captains Services
+                </span>
+              </Link>
 
-            <div className="hidden items-center gap-5 md:flex">
-              <div className="h-8 w-px bg-mist-300" aria-hidden="true" />
-              <a
-                href={phoneLink}
-                className="flex flex-col items-center text-center"
+              <button
+                type="button"
+                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-mist-300 bg-white text-ocean-950 transition-colors duration-300 hover:bg-mist-100"
+                aria-expanded={isOpen}
+                aria-controls="mobile-navigation"
+                aria-label="Toggle menu"
+                onClick={() => setIsOpen((current) => !current)}
               >
-                <span className="block text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                  Call Us
-                </span>
-                <span className="mt-1 block text-sm font-semibold text-ocean-950 lg:text-base">
-                  {phoneNumber}
-                </span>
-              </a>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  className="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  {isOpen ? (
+                    <path d="M6 6L18 18M18 6L6 18" />
+                  ) : (
+                    <>
+                      <path d="M4 7H20" />
+                      <path d="M4 12H20" />
+                      <path d="M8 17H20" />
+                    </>
+                  )}
+                </svg>
+              </button>
             </div>
-
-            <button
-              type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-mist-300 bg-white text-ocean-950 transition-colors duration-300 hover:bg-mist-100 md:hidden"
-              aria-expanded={isOpen}
-              aria-controls="mobile-navigation"
-              aria-label="Toggle menu"
-              onClick={() => setIsOpen((current) => !current)}
-            >
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                className="h-5 w-5"
-                aria-hidden="true"
-              >
-                {isOpen ? (
-                  <path d="M6 6L18 18M18 6L6 18" />
-                ) : (
-                  <>
-                    <path d="M4 7H20" />
-                    <path d="M4 12H20" />
-                    <path d="M8 17H20" />
-                  </>
-                )}
-              </svg>
-            </button>
           </div>
 
           <div
             className={joinClasses(
-              "grid overflow-hidden transition-all duration-300 ease-out md:hidden",
+              "grid overflow-hidden transition-all duration-300 ease-out lg:hidden",
               isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
             )}
           >
@@ -294,7 +323,7 @@ export default function Navbar() {
                 })}
               </nav>
 
-              <div className="px-4 pb-4">
+              <div className="space-y-3 px-4 pb-4">
                 <a
                   href={phoneLink}
                   className="flex items-center justify-between rounded-xl border border-mist-300 bg-mist-100 px-4 py-4 text-ocean-950"
@@ -308,6 +337,22 @@ export default function Navbar() {
                     </span>
                   </span>
                   <span className="rounded-full border border-mist-300 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-ocean-950">
+                    Call
+                  </span>
+                </a>
+                <a
+                  href={emergencyPhoneLink}
+                  className="flex items-center justify-between rounded-xl border border-[#b91c1c] bg-[#b91c1c] px-4 py-4 text-white shadow-[0_18px_30px_-22px_rgba(127,29,29,0.65)]"
+                >
+                  <span>
+                    <span className="block text-[11px] uppercase tracking-[0.18em] text-white">
+                      Emergency Hotline
+                    </span>
+                    <span className="mt-1 block text-sm font-semibold text-white">
+                      {emergencyHotline}
+                    </span>
+                  </span>
+                  <span className="rounded-full border border-white/40 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#b91c1c]">
                     Call
                   </span>
                 </a>
