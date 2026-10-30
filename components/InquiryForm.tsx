@@ -190,19 +190,15 @@ export default function InquiryForm({
                     <option value="" disabled>
                       Select a service
                     </option>
-                    <option value="captain-for-hire">Captain for Hire</option>
-                    <option value="launch-service">Launch Assistance</option>
-                    <option value="maintenance">
-                      Boat Cleaning &amp; Maintenance
+                    <option value="captain-for-hire">Captain For Hire</option>
+                    <option value="towing-services">
+                      BoatUS Towing Services
                     </option>
-                    <option value="boat-repair">Boat Repair</option>
+                    <option value="maintenance">Boat Maintenance</option>
                     <option value="marine-electronics">
                       Marine Electronics
                     </option>
-                    <option value="drone-photography">
-                      Drone Aerial Photography
-                    </option>
-                    <option value="towing-services">Towing Services</option>
+                    <option value="launch-service">Launch Service</option>
                   </select>
                 </div>
               )}

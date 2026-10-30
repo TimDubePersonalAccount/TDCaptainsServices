@@ -34,6 +34,7 @@ export const serviceMenuItems = [
 ];
 
 export const phoneNumber = "(845) 535-4288";
+export const emergencyHotline = "(845) 535-4290";
 
 export const serviceItems = [
   {
